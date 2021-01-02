@@ -1,5 +1,5 @@
 body {
-    color: darkmagenta; font-family: Arial, Helvetica, sans-serif;
+    color: slategrey ; font-family: Arial, Helvetica, sans-serif;
 }
 h1 {
     background-color:cornsilk;
@@ -12,6 +12,7 @@ button {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 4px 2px;
     cursor: pointer;
 }
@@ -36,4 +37,16 @@ button {
   .button2:hover {
     background-color: #008CBA;
     color: white;
+  }
+  
+a {
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 18px;
+    color: rgb(146, 137, 137);
+    background-color: ivory;
+  }
+.a_head1 {
+    font-weight: bold;
+    font-size: 32px;
+    color: rgb(102, 126, 205);
   }
