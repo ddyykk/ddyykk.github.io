@@ -2,7 +2,7 @@ body {
     color: slategrey ; font-family: Arial, Helvetica, sans-serif;
 }
 h1 {
-    background-color:cornsilk;
+    background-color:lightgray;
 }
 button {
     border: none;
@@ -43,7 +43,6 @@ a {
     font-family: Arial, Helvetica, sans-serif; 
     font-size: 18px;
     color: rgb(146, 137, 137);
-    background-color: ivory;
 }
 
 .a_head1 {
@@ -51,6 +50,7 @@ a {
     font-weight: bold;
     font-size: 32px;
     color: rgb(102, 126, 205);
+    background-color:cornsilk;
 }
 
 table {
