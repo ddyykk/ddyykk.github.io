@@ -63,3 +63,23 @@ th,tr,td {
     padding: 10px;
     text-align:center;
 }
+
+.p_demo {
+    background-color:springgreen;
+    font-family: fantasy;
+    font-style: italic;
+    color: midnightblue;
+}
+
+.h_demo {
+background-color:salmon;
+color:slateblue;
+font-weight: bolder;
+font-family: 'Times New Roman', Times, serif;
+font-size: 40px;
+}
+
+#id_demo {
+    background-color: black;
+    color: white;
+}
