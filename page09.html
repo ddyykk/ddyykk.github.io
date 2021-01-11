@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try the Javascript</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div style="background-color: cornsilk;">
+        <img src="https://avatars0.githubusercontent.com/u/42371034?s=460&u=324666fed1b9f17985d6c061ee88841d3d14e087&v=4" alt="My icon" height="100" width="100">
+        <a class="a_head1" href="./index.html">ddyykk_hello's Blog</a>
+        <br>
+    </div>
+
+    <div>
+        <h2>
+            Javascript in html.
+        </h2>
+        <p>The following demostrates a simple Javascript use:</p>
+        <br><p id="demo"></p>
+        <button class="button1" onclick="myFunction()"> Click to see the date and time.</button>
+        <script>
+            function myFunction(){
+                document.getElementById("demo").innerHTML=Date();
+                document.getElementById("demo").style.fontSize = "25px"; 
+                document.getElementById("demo").style.color = "red";
+                document.getElementById("demo").style.backgroundColor = "white";  
+            }
+        </script>
+    </div><br><br>
+
+    <div>
+        <h2>The second Javascript feature.</h2>
+        <p>The following 2 buttons can change the style of the text.</p>
+        <p id="demo2">Text.</p>
+        <button class="button1" onclick="changeStyle(0)">style 1</button>
+        <button class="button2" onclick="changeStyle(1)">style 2</button>
+        <script>
+            function changeStyle(sw) {
+                if(sw==0) {
+                    document.getElementById("demo2").style.color="green";
+                    document.getElementById("demo2").style.backgroundColor="pink";
+                    document.getElementById("demo2").style.fontSize="5vw";
+                }
+                else{
+                    document.getElementById("demo2").style.color="red";
+                    document.getElementById("demo2").style.backgroundColor="cyan";
+                    document.getElementById("demo2").style.fontSize="6vw";
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
