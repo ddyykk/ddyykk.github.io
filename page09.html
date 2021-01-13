@@ -20,14 +20,7 @@
         <p>The following demostrates a simple Javascript use:</p>
         <br><p id="demo"></p>
         <button class="button1" onclick="myFunction()"> Click to see the date and time.</button>
-        <script>
-            function myFunction(){
-                document.getElementById("demo").innerHTML=Date();
-                document.getElementById("demo").style.fontSize = "25px"; 
-                document.getElementById("demo").style.color = "red";
-                document.getElementById("demo").style.backgroundColor = "white";  
-            }
-        </script>
+        <script src="./main.js"></script>
     </div><br><br>
 
     <div>
@@ -36,20 +29,6 @@
         <p id="demo2">Text.</p>
         <button class="button1" onclick="changeStyle(0)">style 1</button>
         <button class="button2" onclick="changeStyle(1)">style 2</button>
-        <script>
-            function changeStyle(sw) {
-                if(sw==0) {
-                    document.getElementById("demo2").style.color="green";
-                    document.getElementById("demo2").style.backgroundColor="pink";
-                    document.getElementById("demo2").style.fontSize="5vw";
-                }
-                else{
-                    document.getElementById("demo2").style.color="red";
-                    document.getElementById("demo2").style.backgroundColor="cyan";
-                    document.getElementById("demo2").style.fontSize="6vw";
-                }
-            }
-        </script>
     </div>
 </body>
 </html>
