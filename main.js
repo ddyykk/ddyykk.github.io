@@ -16,3 +16,7 @@ function changeStyle(sw) {
         document.getElementById('demo2').style.fontSize = '6vw';
     }
 }
+function printOnThePage() {
+    var input=prompt('Please type some words');
+    return input;
+}
