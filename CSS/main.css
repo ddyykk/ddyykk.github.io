@@ -2,7 +2,13 @@ body {
     color: slategrey ; 
     font-family: Arial, Helvetica, sans-serif;
 }
+div.header{
+    background-color: cornsilk;
+}
 
+div a img{
+    vertical-align: middle;
+}
 button {
     border: none;
     color: white;
