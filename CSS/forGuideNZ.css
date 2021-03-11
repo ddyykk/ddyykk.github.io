@@ -1,0 +1,28 @@
+@import "main.css";
+table{
+border-collapse: collapse;
+background-blend-mode: screen;
+background-color: beige;
+border: unset;
+margin: 3vw;
+margin-bottom: 5vw;
+}
+caption{
+    font-size: 3vw;
+}
+td,th{
+    border:unset;
+}
+td a{
+    text-decoration: unset;
+    color: darkmagenta;
+}
+
+th{
+    color: darkslategrey;
+    background-color: rgba(153, 199, 46, 0.5);
+}
+
+td:hover{
+    background-color: gainsboro;
+}
