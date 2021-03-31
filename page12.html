@@ -22,18 +22,45 @@
         <p>In this project I will try to make a calculator using html techniques I know.</p>
 
         <h2>The button styles I will use:</h2>
-        <div class="calculator">
-            <button class="numbers">numbers</button> 
-            <button class="control">control</button>
+        <div>
+            <button class="numbers" style="width: auto;">numbers</button> 
+            <button class="control" style="width: auto;">control</button>
         </div>
+
         <h2>The display style will be used:</h2>
-        <div class="calculator">
+        <div>
             <div class="display">
                 <div class="content">123456789</div>
             </div>
         </div>
-        <div>   
-
+        <h2>Now is the calculator's layout:</h2>
+        <div class="calculator" id="outcome">   
+            <div class="display"></div>
+            <div class="buttons">
+            <button class="control left_col">AC</button>
+            <button class="control">±</button>
+            <button class="control">/</button>
+            <button class="control">*</button>
+            <br>
+            <button class="numbers left_col">7</button>
+            <button class="numbers">8</button>
+            <button class="numbers">9</button>
+            <button class="control">-</button>
+            <br>
+            <button class="numbers left_col">4</button>
+            <button class="numbers">5</button>
+            <button class="numbers">6</button>
+            <button class="control">+</button>
+            <br>
+            <button class="numbers left_col">1</button>
+            <button class="numbers">2</button>
+            <button class="numbers">3</button>
+            
+            <br>
+            <button class="numbers left_col" id="number_0">0</button>
+            <button class="numbers">.</button>
+            <button class="control" id="number_equal">=</button>
+            </div>
         </div>
 
 </body>
