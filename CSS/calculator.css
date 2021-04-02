@@ -30,7 +30,7 @@ button {
 .numbers {
     background-image: linear-gradient(#fffdfd, #f0f0f0); /* gradient background color */
     color: darkslategray;
-    box-shadow: 0px 1px 4px 1px rgba(128, 128, 128, 0.3), inset 0px 1px 2px rgba(71, 71, 71, 0.4);
+    box-shadow: 0px 1px 4px 1px rgba(128, 128, 128, 0.5), inset 0px 1px 2px rgba(71, 71, 71, 0.5);
     /* first shadow is outter shadow, second shadow is inner shadow */
 }
 .numbers:active {
@@ -40,7 +40,7 @@ button {
 .control {
     background-image: linear-gradient(#888787, #6b6b6b); /* gradient background color */
     color: white;
-    box-shadow: 0px 1px 4px 1px rgba(128, 128, 128, 0.3), inset 0px 1px 0px rgba(240, 240, 240, 0.5);
+    box-shadow: 0px 1px 4px 1px rgba(128, 128, 128, 0.5), inset 0px 1px 0px rgba(240, 240, 240, 0.6);
     /* first shadow is outter shadow, second shadow is inner shadow */
 }
 .control:active {
@@ -55,20 +55,21 @@ button {
     width: 27vw;
     height: 10vw;
     margin: 10px 10px; /* thsi margin is between the display frame and edge of calculator*/
-    font-size: 60px;
-    text-align: right;
     padding: 20px; /* this space is the one between the numbers and display frame*/
 }
-.buttons {
+.button_container {
     width: 28vw;
     position: relative;
     left: 9px;
 }
 .content {
     position: relative;
-    bottom: -20px;
+    bottom: -30px;
     font-family: digital;
+    font-size: 50px;
+    text-align: right;
     line-height: 70px;
+    overflow: hidden;
 }
 
 .left_col {
@@ -82,7 +83,7 @@ button {
     vertical-align: bottom;
     position: absolute;
     bottom: 0px;
-    right: 6px;
+    right: 7px;
     background-image: linear-gradient(#ff8d23, #f17612);
 }
 #number_equal:active {

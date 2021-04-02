@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A HTML calculator</title>
     <link rel="stylesheet" href="CSS/calculator.css">
+    <script src="JS/calculator.js">
+    // let a = new calculator();
+    </script>
     <link rel="icon" type="image/ico" sizes="16x16" href="Image/faviconJ.ico">
 </head>
 <body>
@@ -33,33 +36,37 @@
                 <div class="content">123456789</div>
             </div>
         </div>
-        <h2>Now is the calculator's layout:</h2>
+        <h2>The functional outcome:</h2>
         <div class="calculator" id="outcome">   
-            <div class="display"></div>
-            <div class="buttons">
-            <button class="control left_col">AC</button>
-            <button class="control">±</button>
-            <button class="control">/</button>
-            <button class="control">*</button>
+            <div class="display">
+                <div class="content" id="display">
+                    0
+                </div>
+            </div>
+            <div class="button_container">
+            <button class="control left_col" id="AC" onclick="calculator.clear()">AC</button>
+            <button class="control" onclick="calculator.get('-')">del</button>
+            <button class="control" onclick="calculator.get('/')">/</button>
+            <button class="control" onclick="calculator.get('*')">*</button>
             <br>
-            <button class="numbers left_col">7</button>
-            <button class="numbers">8</button>
-            <button class="numbers">9</button>
-            <button class="control">-</button>
+            <button class="numbers left_col" onclick="calculator.get('7')">7</button>
+            <button class="numbers" onclick="calculator.get('8')">8</button>
+            <button class="numbers" onclick="calculator.get('9')">9</button>
+            <button class="control" onclick="calculator.get('-')">-</button>
             <br>
-            <button class="numbers left_col">4</button>
-            <button class="numbers">5</button>
-            <button class="numbers">6</button>
-            <button class="control">+</button>
+            <button class="numbers left_col" onclick="calculator.get('4')">4</button>
+            <button class="numbers" onclick="calculator.get('5')">5</button>
+            <button class="numbers" onclick="calculator.get('6')">6</button>
+            <button class="control" onclick="calculator.get('+')">+</button>
             <br>
-            <button class="numbers left_col">1</button>
-            <button class="numbers">2</button>
-            <button class="numbers">3</button>
+            <button class="numbers left_col" onclick="calculator.get('1')">1</button>
+            <button class="numbers" onclick="calculator.get('2')">2</button>
+            <button class="numbers" onclick="calculator.get('3')">3</button>
             
             <br>
-            <button class="numbers left_col" id="number_0">0</button>
-            <button class="numbers">.</button>
-            <button class="control" id="number_equal">=</button>
+            <button class="numbers left_col" id="number_0" onclick="calculator.get('0')">0</button>
+            <button class="numbers" onclick="calculator.get('.')">.</button>
+            <button class="control" id="number_equal" onclick="calculator.show()">=</button>
             </div>
         </div>
 
