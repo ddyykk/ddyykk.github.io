@@ -19,7 +19,15 @@ let calculator = {
         document.getElementById('display').textContent += value;
         // this append the input to a string
     },
-
+    del:function(){
+        if (this.finish_bit) {
+            // if one calculation is just finished, del button does nothing to it
+        } else {
+            let a=document.getElementById('display').innerHTML.toString();
+            a=a.substr(0,a.length-1);
+            document.getElementById('display').innerHTML=a;
+        }
+    },
     calculate: function () {
         return eval(document.getElementById('display').textContent);
         // the line will use the input string as a math instruction and return the answer
