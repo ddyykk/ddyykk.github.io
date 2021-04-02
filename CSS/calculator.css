@@ -82,7 +82,7 @@ button {
     vertical-align: bottom;
     position: absolute;
     bottom: 0px;
-    /* right: 13px; */
+    right: 1px;
     background-image: linear-gradient(#ff8d23, #f17612);
 }
 #number_equal:active {
