@@ -9,8 +9,7 @@
     /* this padding is the space between buttons and the edge of the calculator */
     position: relative;
     /* left: 10%; */
-    width: 32%;
-    margin: auto;
+    width: 370px;
     /* border: 1 solid white; doesn't work */
     border-radius: 10px;
     box-shadow: 0px 1px 4px 1px rgba(128, 128, 128, 0.3), inset 0px 1px 2px rgba(71, 71, 71, 0.4);
@@ -25,7 +24,7 @@ button {
     margin: 10px;
     padding: 16px;
     border-radius: 8px;
-    width: 5vw;
+    width: 61px;
 }
 .numbers {
     background-image: linear-gradient(#fffdfd, #f0f0f0); /* gradient background color */
@@ -52,15 +51,15 @@ button {
     box-shadow: inset 0px 1px 3px 1px rgba(117, 117, 117, 0.6);
     border: 7px solid rgb(73, 56, 23);
     border-radius: 10px;
-    width: 27vw;
-    height: 10vw;
+    width: 330px;
+    height: 130px;
     margin: 10px 10px; /* thsi margin is between the display frame and edge of calculator*/
     padding: 20px; /* this space is the one between the numbers and display frame*/
 }
 .button_container {
-    width: 28vw;
+    width: 340px;
     position: relative;
-    left: 9px;
+    left: 5px;
 }
 .content {
     position: relative;
@@ -76,14 +75,14 @@ button {
     position: relative;
 }
 #number_0 {
-    width: 12vw;
+    width: 146px;
 }
 #number_equal {
     height: 143px;
     vertical-align: bottom;
     position: absolute;
     bottom: 0px;
-    right: 13px;
+    /* right: 13px; */
     background-image: linear-gradient(#ff8d23, #f17612);
 }
 #number_equal:active {
