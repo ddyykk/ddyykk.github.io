@@ -21,10 +21,10 @@ button {
     font-weight: bolder;
     text-shadow: 0px -1px 1px rgba(168, 168, 168, 0.5);
     text-align: center;
-    margin: 10px;
-    padding: 16px;
+    margin: 5px;
+    padding: 18px;
     border-radius: 8px;
-    width: 61px;
+    width: 68px;
 }
 .numbers {
     background-image: linear-gradient(#fffdfd, #f0f0f0); /* gradient background color */
@@ -57,9 +57,9 @@ button {
     padding: 20px; /* this space is the one between the numbers and display frame*/
 }
 .button_container {
-    width: 340px;
+    width: 329px;
     position: relative;
-    left: 5px;
+    left: 11px;
 }
 .content {
     position: relative;
@@ -75,14 +75,14 @@ button {
     position: relative;
 }
 #number_0 {
-    width: 146px;
+    width: 150px;
 }
 #number_equal {
-    height: 143px;
+    height: 140px;
     vertical-align: bottom;
     position: absolute;
     bottom: 0px;
-    right: 1px;
+    right: 3px;
     background-image: linear-gradient(#ff8d23, #f17612);
 }
 #number_equal:active {
