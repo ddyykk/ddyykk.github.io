@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Try to deploy jquery</title>
+        <link rel="stylesheet" href="./CSS/main.css" />
+        <link rel="icon" type="image/ico" sizes="16x16" href="Image/faviconJ.ico" />
+        <script src="./JS/jquery-3.6.0.js"></script>
+        <script>
+            $('document').ready(function () {
+                $('#enlarge').click(function () {
+                    $('.img').css('width', '55%');
+                    $('.img').css('height', '55%');
+                });
+                $('#enlarge').mousedown(function () {
+                    $(this).css('background-color', 'darkgray');
+                });
+                $('#enlarge').mouseup(function () {
+                    $(this).css('background-color', 'rgb(240,240,240)');
+                });
+                $('#shrink').click(function () {
+                    $('.img').css('width', '45%');
+                    $('.img').css('height', '45%');
+                    $('.img').css('background-color', 'darkgray');
+                });
+                $('#shrink').mousedown(function () {
+                    $(this).css('background-color', 'darkgray');
+                });
+                $('#shrink').mouseup(function () {
+                    $(this).css('background-color', 'rgb(240,240,240)');
+                });
+            });
+
+            // the above script can also be written as:
+            // which is easier to write as it grouped some elements operations, but hard to read.
+            // $('document').ready(function () {
+            //     $('#enlarge').on({
+            //         click: function () {
+            //             $('.img').css('width', '55%');
+            //             $('.img').css('height', '55%');
+            //         },
+            //         mousedown:function(){
+            //             $(this).css('background-color', 'darkgray');
+            //         },
+            //         mouseup:function(){
+            //             $(this).css('background-color', 'rgb(240,240,240)');
+            //         },
+            //     });
+            //     $('#shrink').on({
+            //         click: function () {
+            //             $('.img').css('width', '45%');
+            //             $('.img').css('height', '45%');
+            //         },
+            //         mousedown:function(){
+            //             $(this).css('background-color', 'darkgray');
+            //         },
+            //         mouseup:function(){
+            //             $(this).css('background-color', 'rgb(240,240,240)');
+            //         },
+            //     });
+            // });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <a class="a_head1" href="./index.html">
+                <img src="https://avatars0.githubusercontent.com/u/42371034?s=460&u=324666fed1b9f17985d6c061ee88841d3d14e087&v=4" alt="My icon" height="100" width="100" />
+                ddyykk_hello's Blog</a
+            >
+            <br />
+        </div>
+
+        <h1>The use of jquery</h1>
+        <p>This page is for showing some basic impliment of jquery.</p>
+        <div>
+            <h3>Button that calls a jquery function.</h3>
+            <p>Try press the buttons to see what they can do.</p>
+            <img class="img" src="./Image/Camera.jpg" alt="a Camera" style="height: 50%; width: 50%" />
+            <br />
+            <button id="enlarge">button 1</button>
+            <button id="shrink">button 2</button>
+        </div>
+        
+        <div>
+            <br /><br /><br />
+            <h3>Jquery effects.</h3>
+            <p class="test">This is a test paragragh. The button below hides the text and shows after 0.5 second.</p>
+            <br />
+            <button id="hide">hide & show</button>
+            <script>
+                // I put the script here for easy reading
+                $('document').ready(function () {
+                    $('#hide').on({
+                        click: function () {
+                            $('.test').hide(500, function () {
+                                $('.test').show(500);
+                            });
+                        },
+                    });
+                });
+            </script>
+        </div>
+    </body>
+</html>

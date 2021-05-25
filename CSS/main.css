@@ -1,55 +1,60 @@
 body {
-    color: slategrey ; 
+    color: slategrey;
     font-family: Arial, Helvetica, sans-serif;
-    margin:2vw;
+    margin: 2vw;
 }
-div.header{
+div.header {
     background-color: cornsilk;
 }
 
-div a img{
+div a img {
     vertical-align: middle;
 }
-p{
+p {
     padding: 20px 0;
 }
 button {
     border: none;
-    color: white;
-    padding: 15px 32px;
+    color: gray;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 4px 2px;
     cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bolder;
+    text-shadow: 0px -1px 1px rgba(168, 168, 168, 0.5);
+    margin: 9px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 1px 4px 1px rgba(128, 128, 128, 0.5), inset 0px 1px 2px rgba(71, 71, 71, 0.5);
+    /* first shadow is outter shadow, second shadow is inner shadow */
 }
 
 .button1 {
     background-color: white;
     color: black;
-    border: 2px solid #4CAF50;
+    border: 2px solid #4caf50;
 }
-  
+
 .button1:hover {
-    background-color: #4CAF50;
+    background-color: #4caf50;
     color: white;
 }
-  
+
 .button2 {
     background-color: white;
     color: black;
-    border: 2px solid #008CBA;
+    border: 2px solid #008cba;
 }
-  
+
 .button2:hover {
-    background-color: #008CBA;
+    background-color: #008cba;
     color: white;
 }
-  
+
 a {
-    font-family: Arial, Helvetica, sans-serif; 
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     color: rgb(146, 137, 137);
 }
@@ -59,7 +64,7 @@ a {
     font-weight: bold;
     font-size: 6vw;
     color: rgb(102, 126, 205);
-    background-color:cornsilk;
+    background-color: cornsilk;
 }
 
 table {
@@ -67,25 +72,27 @@ table {
     background-color: cornsilk;
 }
 
-th,tr,td {
+th,
+tr,
+td {
     border: 1px dotted black;
     padding: 10px;
-    text-align:center;
+    text-align: center;
 }
 
 .p_demo {
-    background-color:springgreen;
+    background-color: springgreen;
     font-family: fantasy;
     font-style: italic;
     color: midnightblue;
 }
 
 .h_demo {
-background-color:salmon;
-color:slateblue;
-font-weight: bolder;
-font-family: 'Times New Roman', Times, serif;
-font-size: 40px;
+    background-color: salmon;
+    color: slateblue;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
 }
 
 #id_demo {
