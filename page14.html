@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Use jquery in seperate js file</title>
+        <link rel="stylesheet" href="./CSS/main.css" />
+        <link rel="icon" type="image/ico" sizes="16x16" href="Image/faviconJ.ico" />
+        <script src="./JS/jquery-3.6.0.js"></script>
+        <script src="./JS/jqueryFunctinons.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <a class="a_head1" href="./index.html">
+                <img src="https://avatars0.githubusercontent.com/u/42371034?s=460&u=324666fed1b9f17985d6c061ee88841d3d14e087&v=4" alt="My icon" height="100" width="100" />
+                ddyykk_hello's Blog
+            </a>
+            <br />
+        </div>
+
+        <h1>I will try to use jquery in a different js file rather than put all code in one html file.</h1>
+        <h2>1. Hide and show some elements.</h2>
+        <p class="hide">This is a paragragh.</p>
+        <a class="hide" href="./index.html">This is a link to homepage.</a>
+        <br />
+        <button id="hide">Hide and show</button>
+
+        <h2>2. Fade in and fade out elements.</h2>
+        <p class="fade">This is a paragragh.</p>
+        <div class="fade">This is a div.</div>
+        <div class="fade" style="background-color: aqua">This is a div with background color.</div>
+        <br />
+        <button id="fade">Fade in and out</button>
+        <h3>Can also fade to a certain opacity.(Click again to restore the opacity.)</h3>
+        <button id="opacity">Fade to:</button>
+
+        <h2>3. Sliding effects.</h2>
+        <p>Here are two divs to demostrate the sliding.</p>
+
+        <div id="header">Header</div>
+        <div class="slide">
+            Content list
+            <ul>
+                <li>Content 1</li>
+                <li>Content 2</li>
+                <li>Content 3</li>
+            </ul>
+        </div>
+        <p>Click the header to see the effect.</p>
+        <br />
+        <style>
+            #header {
+                padding: 10px;
+                margin: 1px;
+                outline-style: solid;
+                outline-width: 2px;
+                outline-color: burlywood;
+                background-color: rgb(216, 205, 160);
+                width: 50vw;
+                text-align: center;
+                border-radius: 5px;
+                box-shadow: 0px 1px 4px 1px darkgray;
+                text-shadow: 0px 1px 4px 1px darkgray;
+            }
+            .slide {
+                padding: 10px;
+                margin: 1px;
+                outline-style: solid;
+                outline-width: 2px;
+                outline-color: burlywood;
+                background-color: cornsilk;
+                width: 50vw;
+                text-align: center;
+                border-radius: 5px;
+                box-shadow: 0px 1px 4px 1px darkgray;
+                text-shadow: 0px 1px 4px 1px darkgray;
+            }
+        </style>
+
+        <h2>4. Animations</h2>
+        <p>The button changes the style of the div below.</p>
+        <button id="animate1">Animate 1</button>
+        <div class="animate1">Style</div>
+        <style>
+            .animate1{
+                width: 50px;
+                height: 50px;
+                background-color: darkorange;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+                display: flex;
+                align-items: center;
+                position: absolute;
+            }
+        </style>
+    </body>
+</html>

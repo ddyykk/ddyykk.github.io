@@ -6,12 +6,14 @@ body {
 div.header {
     background-color: cornsilk;
 }
-
+h2{
+    padding: 20px;
+}
 div a img {
     vertical-align: middle;
 }
 p {
-    padding: 20px 0;
+    /* padding: 20px; */
 }
 button {
     border: none;
