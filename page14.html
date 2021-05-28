@@ -19,7 +19,7 @@
             <br />
         </div>
 
-        <h1>I will try to use jquery in a different js file rather than put all code in one html file.</h1>
+        <h1>I try to use jquery in a different js file rather than put all code in one html file.</h1>
         <h2>1. Hide and show some elements.</h2>
         <p class="hide">This is a paragragh.</p>
         <a class="hide" href="./index.html">This is a link to homepage.</a>
@@ -50,6 +50,7 @@
         <p>Click the header to see the effect.</p>
         <br />
         <style>
+            /* I put the css here to make it easy to read, this css is for the div above only */
             #header {
                 padding: 10px;
                 margin: 1px;
@@ -83,16 +84,41 @@
         <button id="animate1">Animate 1</button>
         <div class="animate1">Style</div>
         <style>
-            .animate1{
+            .animate1 {
                 width: 50px;
                 height: 50px;
                 background-color: darkorange;
                 font-family: Arial, Helvetica, sans-serif;
                 font-size: 16px;
                 display: flex;
+                left: 20px;
+                top: 10px;
                 align-items: center;
-                position: absolute;
+                position: relative;
             }
         </style>
+        <br />
+        <br />
+        <p>Next try to click the box below.</p>
+        <div id="animate2">Click me</div>
+        <style>
+            #animate2 {
+                margin: 50px;
+                padding: 7px;
+                width: 100px;
+                height: 25px;
+                background-color: rgb(111, 192, 192);
+                color: cornsilk;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+                text-align: center;
+                border: 2px solid darkgrey;
+                border-radius: 5px;
+                box-shadow: 0 1px 4px 1px black;
+                position: relative;
+            }
+        </style>
+        <div style="width: 700px; height: 700px"></div>
+        <button id="stop">OK, I give up</button>
     </body>
 </html>

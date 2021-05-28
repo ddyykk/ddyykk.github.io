@@ -32,13 +32,16 @@ $(document).ready(function () {
             $('#header').fadeTo(50, 1);
         }
     );
+
     $('#animate1').click(function (e) {
         e.preventDefault();
-        if (sw === 0) { //make it toggles instead of one shot effect
+        if (sw === 0) {
+            //make it toggles instead of one shot effect
             $('.animate1').animate(
                 {
                     // position:"absolute", doesn't work
                     left: '250px',
+                    top: '10px',
                     height: '150px',
                     width: '150px',
                     fontSize: '36px',
@@ -49,7 +52,8 @@ $(document).ready(function () {
         } else {
             $('.animate1').animate(
                 {
-                    left: '28px',
+                    left: '23px',
+                    top: '10px',
                     height: '50px',
                     width: '50px',
                     fontSize: '16px',
@@ -58,5 +62,40 @@ $(document).ready(function () {
             ); //500ms to finish the animation
             sw = 0;
         }
+    });
+
+    let i = 0;
+    $('#animate2').hover(
+        function () {
+            // This makes the box running around
+            let positionArray = [75, 255, 95, 170, 25, 259, 350, 423, 500, 37, 550];
+            $('#animate2').animate(
+                {
+                    left: positionArray[i] + 'px',
+                    top: positionArray[i+1] + 'px',
+                },
+                100 // The moving speed of the box
+            );
+            i++;
+        },
+        function () {
+            // if the index number is too large, reset it
+            if (i >= 10) {
+                i = 0;
+            } else {
+                // do noting
+            }
+        }
+    );
+    $("#animate2").click(function (e) { 
+        e.preventDefault();
+        $("#animate2").text("You got me");
+    });
+    $("#stop").click(function (e) { 
+        e.preventDefault();
+        $("#animate2").text("Now try");
+        $("#animate2").css('position', "static");
+        $("#animate2").css('left', "10px");
+        $("#animate2").css('top', "10px");
     });
 });
