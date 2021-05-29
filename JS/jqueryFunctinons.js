@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    //wrap everything in a ready function, run them after the page is loaded
     $('#hide').click(function () {
         $('.hide').toggle();
     });
@@ -36,18 +37,20 @@ $(document).ready(function () {
     $('#animate1').click(function (e) {
         e.preventDefault();
         if (sw === 0) {
-            //make it toggles instead of one shot effect
-            $('.animate1').animate(
+            //use the sw defined before, to make it toggle instead of one shot effect
+
+            $('.animate1').css('position', 'relative').animate(
+                // The "positon" needs to be changed to "relative" before I can move the block,
+                // a common mistake is try to change it in the animate function, however .animate can only handle numeric values
                 {
-                    // position:"absolute", doesn't work
                     left: '250px',
                     top: '10px',
                     height: '150px',
                     width: '150px',
                     fontSize: '36px',
                 },
-                500
-            ); //500ms to finish the animation
+                500 //500ms to finish the animation
+            );
             sw = 1;
         } else {
             $('.animate1').animate(
@@ -58,8 +61,8 @@ $(document).ready(function () {
                     width: '50px',
                     fontSize: '16px',
                 },
-                500
-            ); //500ms to finish the animation
+                500 //500ms to finish the animation
+            );
             sw = 0;
         }
     });
@@ -72,7 +75,7 @@ $(document).ready(function () {
             $('#animate2').animate(
                 {
                     left: positionArray[i] + 'px',
-                    top: positionArray[i+1] + 'px',
+                    top: positionArray[i + 1] + 'px',
                 },
                 100 // The moving speed of the box
             );
@@ -87,15 +90,18 @@ $(document).ready(function () {
             }
         }
     );
-    $("#animate2").click(function (e) { 
+    $('#animate2').click(function (e) {
         e.preventDefault();
-        $("#animate2").text("You got me");
+        $('#animate2').text('You got me');
     });
-    $("#stop").click(function (e) { 
+    $('#stop').click(function (e) {
         e.preventDefault();
-        $("#animate2").text("Now try");
-        $("#animate2").css('position', "static");
-        $("#animate2").css('left', "10px");
-        $("#animate2").css('top', "10px");
+        $('#animate2').text('Now try');
+        $('#animate2').css('position', 'static');
+        $('#animate2').css('left', '10px');
+        $('#animate2').css('top', '10px');
+
+        // the above can be written using chaining as this:
+        // $("#animate2").text("Now try").css("position","static").css("left","10px").css("top","10px");
     });
 });
