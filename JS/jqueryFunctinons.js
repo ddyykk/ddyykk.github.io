@@ -104,4 +104,45 @@ $(document).ready(function () {
         // the above can be written using chaining as this:
         // $("#animate2").text("Now try").css("position","static").css("left","10px").css("top","10px");
     });
+
+    // get and set the content and values
+    $('#get').click(function (e) {
+        e.preventDefault();
+        $('#test1').text('The text I got is: ' + $('#origin').text());
+    });
+    $('#set').click(function (e) {
+        e.preventDefault();
+        $('#test1').text($('#origin').text());
+    });
+    $('#getAttr').click(function (e) {
+        e.preventDefault();
+        $('#test1').text('The style I got is: ' + $('#origin').attr('style'));
+    });
+
+    let a, b, c, d;
+    function defaultGetter() {
+        a = $('#test1').css('background-color');
+        b = $('#test1').css('color');
+        c = $('#test1').css('font-size');
+        d = $('#test1').css('font-family');
+    }
+    // store the default css attributes for later use
+    defaultGetter();
+
+    $('#setAttr').click(function (e) {
+        e.preventDefault();
+        $('#test1').attr('style', $('#origin').attr('style'));
+        //note here, the css attributes here is read as one string, not 3 attributes, and the name of the attribute is style!
+    });
+    $('#reset').click(function (e) {
+        e.preventDefault();
+        $('#test1').text('This paragragh will show the output.').css({
+            // just using css() because the attr() is too complicated to use here,
+            //I need to combine all the attributes and set the right spaces and punctuations
+            'background-color': a,
+            color: b,
+            'font-size': c,
+            'font-family': d,
+        });
+    });
 });
