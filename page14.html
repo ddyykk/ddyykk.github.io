@@ -93,7 +93,7 @@
                 display: flex;
                 /* left: 20px; */
                 /* top: 10px; */
-                /* these don't work because the attibute "position" by default is "static" */
+                /* these won't work because the attibute "position" by default is "static" */
                 align-items: center;
             }
         </style>
@@ -120,16 +120,88 @@
         </style>
         <div style="width: 700px; height: 550px"></div>
         <button id="stop">OK, I give up</button>
-        
+
         <h2>5. Set and get</h2>
-        <p  id="origin" style="background-color: beige; color: brown; font-size: x-large; font-family: fantasy;">This is a sample paragragh.</p>
+        <p id="origin" style="background-color: beige; color: brown; font-size: x-large; font-family: fantasy">This is a sample paragragh.</p>
         <!-- set the first paragraph with some style and use jQuery to get and set the propertise -->
         <p id="test1">This paragragh will show the output.</p>
-        <br>
+        <br />
         <button id="get">Get the text</button>
         <button id="set">Set the text</button>
         <button id="getAttr">Get the style info</button>
         <button id="setAttr">Set the style</button>
         <button id="reset">Reset</button>
+        <br />
+
+        <h2>6. Add and remove content</h2>
+        <div id="container2">
+            <div id="container" style="border: 1px solid black">
+                <p id="content">This is a paragraph.</p>
+            </div>
+        </div>
+        <button id="append">Append text</button><button id="appendMulti">Append multiple</button> <button id="after">Add after</button><button id="addMulti">Add multiple</button>
+        <br />
+        <button id="empty">Empty element</button><button id="remove">Remove element</button>
+        <button id="reset1">Reset</button>
+
+        <h2>7. About classes</h2>
+        <p>Let's define a style with a class name.</p>
+        <p>class name = "testClass", background-color: lightgray; font-size: 20px; font-family: fantasy</p>
+        <p>class name = "redText", color:red;</p>
+        <br />
+        <p id="classTest">You can add class to this text.</p>
+        <style>
+            .testClass {
+                /* This is the class can be applied to any element */
+                background-color: lightgray;
+                font-size: 20px;
+                font-family: fantasy;
+            }
+            .redText {
+                color: red;
+            }
+        </style>
+        <button id="addClass">Add class</button>
+        <button id="removeClass">Remove class</button>
+        <button id="toggleClass">Toggle class</button>
+
+        <h2>8. Height and width</h2>
+        <div id="frame" style="background-color: royalblue; border: 1px solid black">
+            <!-- if I don't use border here I can't show the margin.
+            The way of showing margin in a different color is to wrap it in a <div>, the parent div's baground-color is the margin color.
+            -->
+            <div id="output" class="output"><p>This is content.</p></div>
+        </div>
+        <style>
+            .output {
+                margin: 25px;
+                padding: 15px;
+                background-image: linear-gradient(to bottom, rgba(240, 255, 40, 1) 0%, rgba(240, 255, 40, 1) 100%), linear-gradient(to bottom, rgba(240, 40, 40, 1) 0%, rgba(240, 40, 40, 1) 100%);
+                background-clip: content-box, padding-box;
+                /* This way of showing padding color is from :
+                https://stackoverflow.com/questions/14628601/can-i-add-background-color-only-for-padding/18424078#18424078 */
+            }
+            .testClass2 {
+                /* This class is for changing the div, so the height change can be seen */
+                font-size: 20px;
+                font-family: fantasy;
+                height: 50px;
+                padding: 25px;
+                margin: 15px;
+                border: 5px solid cornsilk;
+                border-radius: 5px;
+            }
+        </style>
+        <p>Here used a graph to demostrate the different hieght and weight in web.</p>
+        <p>The yellow part is the content, the red part is padding, the blue part is margin.The ivory part is border.</p>
+        <p>I use a button to change the "height()",and thus there is change in " innerHeight() " and "outerHeight()".</p>
+        <p>The height of the content is <input type="text" id="height" /></p>
+        <p>The inner height of the box is (content+padding)<input type="text" id="inner" /></p>
+        <p>The outer height of the box is (content+padding+border)<input type="text" id="outer" /></p>
+        <p>The true height of the box is (content+padding+border+margin)<input type="text" id="true" /></p>
+        <button id="contentHeight">Height toggle</button>
+        <button id="innerButton">Inner</button>
+        <button id="outterButton">Outer</button>
+        <button id="trueButton">True</button>
     </body>
 </html>

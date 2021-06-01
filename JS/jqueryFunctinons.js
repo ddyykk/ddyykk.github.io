@@ -145,4 +145,71 @@ $(document).ready(function () {
             'font-family': d,
         });
     });
+
+    $('#append').click(function (e) {
+        e.preventDefault();
+        $('#content').append(' Added some text in the end.');
+    });
+    $('#appendMulti').click(function (e) {
+        //add multiple entries
+        e.preventDefault();
+        $('#container').append('<p>One line after.</p>', '<p>Second line.</P>').prepend($('<p></p>').text('One line before the paragraph.'));
+    });
+    $('#after').click(function (e) {
+        e.preventDefault();
+        $('#container').after('Added some text after the current element. <br>');
+        // #container is a <div>, adding text only will result in some text without css style, add the <p> can tackle it.
+    });
+    $('#addMulti').click(function (e) {
+        //add multiple entries
+        e.preventDefault();
+        $('#container').after('<p>One line after.</p>', '<p>Second line.</P>');
+    });
+    $('#remove').click(function (e) {
+        e.preventDefault();
+        $('#container').remove();
+    });
+    $('#empty').click(function (e) {
+        e.preventDefault();
+        $('#container').empty();
+    });
+    $('#reset1').click(function (e) {
+        e.preventDefault();
+        $('#container2').empty();
+        $('#container2').append(' <div id="container" style="border: 1px solid black"><p id="content">This is a paragraph.</p></div> ');
+        //This is a long string appended, note that I have to use single quotation mark because there are double quotations in the string.
+    });
+
+    $('#addClass').click(function (e) {
+        e.preventDefault();
+        $('#classTest').addClass('testClass redText');
+    });
+    $('#removeClass').click(function (e) {
+        e.preventDefault();
+        $('#classTest').removeClass();
+    });
+    $('#toggleClass').click(function (e) {
+        e.preventDefault();
+        $('#classTest').toggleClass('testClass redText');
+        // note:even the toggleClass() is empty in the bracket, toggle can still work, even when the target class is been removed
+    });
+
+
+    $('#contentHeight').click(function (e) {
+        e.preventDefault();
+        $('#output').toggleClass('testClass2');
+        $('#height').attr('value', $('#output').height() + ' px');
+    });
+    $('#innerButton').click(function (e) {
+        e.preventDefault();
+        $('#inner').attr('value', $('#output').innerHeight() + ' px');
+    });
+    $('#outterButton').click(function (e) {
+        e.preventDefault();
+        $('#outer').attr('value', $('#output').outerHeight() + ' px');
+    });
+    $('#trueButton').click(function (e) {
+        e.preventDefault();
+        $('#true').attr('value', $('#output').outerHeight(true) + ' px');
+    });
 });
