@@ -43,6 +43,9 @@ button {
 button:active{
     background-color: lightgray;
 }
+button:hover{
+    cursor: pointer;
+}
 
 .button1 {
     background-color: white;
